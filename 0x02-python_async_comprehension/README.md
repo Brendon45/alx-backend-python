@@ -10,7 +10,7 @@
 
 ``Read or watch:``
 
-- [PEP 530 – Asynchronous Comprehensions(https://peps.python.org/pep-0530/)
+- [PEP 530 – Asynchronous Comprehensions](https://peps.python.org/pep-0530/)
 - [What’s New in Python: Asynchronous Comprehensions / Generators](https://www.blog.pythonlibrary.org/2017/02/14/whats-new-in-python-asynchronous-comprehensions-generators/)
 - [Type-hints for generators](https://stackoverflow.com/questions/42531143/how-to-type-hint-a-generator-in-python-3)
 
@@ -66,9 +66,9 @@ The coroutine will loop 10 times, each time ``asynchronously`` wait 1 second, th
 
 ``Repo:``
 
-    GitHub repository: ``alx-backend-python``
-    Directory: ``0x02-python_async_comprehension``
-    File: ``0-async_generator.py``
+    GitHub repository: alx-backend-python
+    Directory: 0x02-python_async_comprehension
+    File: 0-async_generator.py
 
 ## 1. Async Comprehensions
 
@@ -94,9 +94,9 @@ The coroutine will collect 10 random numbers using an async comprehensing over `
 
 ``Repo:``
 
-    GitHub repository: ``alx-backend-python``
-    Directory: ``0x02-python_async_comprehension``
-    File: ``1-async_comprehension.py``
+    GitHub repository: alx-backend-python
+    Directory: 0x02-python_async_comprehension
+    File: 1-async_comprehension.py
 
 ## 2. Run time for four parallel comprehensions
 
@@ -127,7 +127,7 @@ Notice that the total runtime is roughly 10 seconds, explain it to yourself.
 
 ``Repo:``
 
-    GitHub repository: ``alx-backend-python
+    GitHub repository: alx-backend-python
     Directory: 0x02-python_async_comprehension
     File: 2-measure_runtime.py
 
