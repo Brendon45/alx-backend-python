@@ -55,7 +55,11 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 `utils.py` (or [download](https://intranet-projects-files.s3.amazonaws.com/webstack/utils.py))
 
-<#!/usr/bin/env python3
+<details>
+<summary>Click to show/hide file contents</summary>
+
+```python
+#!/usr/bin/env python3
 """Generic utilities for github org client.
 """
 import requests
@@ -129,5 +133,6 @@ def memoize(fn: Callable) -> Callable:
             setattr(self, attr_name, fn(self))
         return getattr(self, attr_name)
 
-    return property(memoized)>
-<summary>Click to show/hide file contents</summary>
+    return property(memoized)
+</details>
+```
