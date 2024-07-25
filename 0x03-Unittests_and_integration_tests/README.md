@@ -136,7 +136,6 @@ def memoize(fn: Callable) -> Callable:
     return property(memoized)
 
 </details>
-```
 
 #  client.py (or download)
 
