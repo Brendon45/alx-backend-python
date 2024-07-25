@@ -58,7 +58,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 <details>
 <summary>Click to show/hide file contents</summary>
 
-```python
+
 #!/usr/bin/env python3
 """Generic utilities for github org client.
 """
