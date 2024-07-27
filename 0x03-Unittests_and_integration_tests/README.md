@@ -1189,6 +1189,12 @@ For each of these inputs, test with `assertEqual` that the function returns the 
 
 The body of the test method should not be longer than 2 lines.
 
+__Repo:__
+
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_utils.py
+
 ## 1. Parameterize a unit test
 
 Implement `TestAccessNestedMap.test_access_nested_map_exception`. Use the `assertRaises` context manager to test that a KeyError is raised for the following inputs (use `@parameterized.expand`):
@@ -1197,6 +1203,12 @@ Implement `TestAccessNestedMap.test_access_nested_map_exception`. Use the `asser
     nested_map={"a": 1}, path=("a", "b")
 
 Also make sure that the exception message is as expected.
+
+__Repo:__
+
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_utils.py
 
 ## 2. Mock HTTP calls
 
@@ -1212,6 +1224,12 @@ We don’t want to make any actual external HTTP calls. Use `unittest.mock.patch
 Test that the mocked `get` method was called exactly once (per input) with `test_url` as argument.
 
 Test that the output of `get_json` is equal to `test_payload`.
+
+__Repo:__
+
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_utils.py
 
 ## 3. Parameterize and patch
 
@@ -1232,6 +1250,12 @@ Inside `test_memoize`, define following class
 
 Use `unittest.mock.patch` to mock `a_method`. Test that when calling `a_property` twice, the correct result is returned but `a_method` is only called once using `assert_called_once`.
 
+__Repo:__
+
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_utils.py
+
 ## 4. Parameterize and patch as decorators
 
 Familiarize yourself with the `client.GithubOrgClient` class.
@@ -1248,6 +1272,12 @@ Use `@parameterized.expand` as a decorator to parametrize the test with a couple
 - `abc`
 Of course, no external HTTP calls should be made.
 
+__Repo:__
+
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_client.py
+
 ## 5. Mocking a property
 
 `memoize` turns methods into properties. Read up on how to mock a property (see resource).
@@ -1258,11 +1288,11 @@ Use `patch` as a context manager to patch `GithubOrgClient.org` and make it retu
 
 Test that the result of `_public_repos_url` is the expected one based on the mocked payload.
 
-Repo:
+__Repo:__
 
-GitHub repository: `alx-backend-python`
-Directory: `0x03-Unittests_and_integration_tests`
-File: `test_client.py`
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_client.py
 
 ## 6. More patching
 
@@ -1278,9 +1308,9 @@ Test that the mocked property and the mocked `get_json` was called once.
 
 __Repo:__
 
-GitHub repository: `alx-backend-python`
-Directory: `0x03-Unittests_and_integration_tests`
-File: `test_client.py`
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_client.py
 
 ## 7. Parameterize
 
@@ -1290,6 +1320,14 @@ Parametrize the test with the following inputs
 
     repo={"license": {"key": "my_license"}}, license_key="my_license"
     repo={"license": {"key": "other_license"}}, license_key="my_license"
+
+You should also parameterize the expected returned value.
+
+__Repo:__
+
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_client.py
 
 ## 8. Integration test: fixtures
 
@@ -1307,4 +1345,22 @@ Use `patch` to start a patcher named `get_patcher`, and use `side_effect` to mak
 
 Implement the `tearDownClass` class method to stop the patcher.
 
-## 
+__Repo:__
+
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_client.py
+
+## 9. Integration tests
+
+Implement the `test_public_repos` method to test `GithubOrgClient.public_repos`.
+
+Make sure that the method returns the expected results based on the fixtures.
+
+Implement `test_public_repos_with_license` to test the `public_repos` with the argument `license="apache-2.0"` and make sure the result matches the expected value from the fixtures.
+
+__Repo:__
+
+    GitHub repository: alx-backend-python
+    Directory: 0x03-Unittests_and_integration_tests
+    File: test_client.py
